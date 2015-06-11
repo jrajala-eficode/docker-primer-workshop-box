@@ -1,0 +1,6 @@
+- name: download Docker installation script
+  get_url: url=https://get.docker.com dest=/tmp/install.sh mode=0770
+- name: install docker
+  shell: /tmp/install.sh
+- name: add vagrant user to docker group
+  user: name=vagrant groups=docker

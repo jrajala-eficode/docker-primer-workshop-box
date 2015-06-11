@@ -1,0 +1,5 @@
+- name: Install essential package
+  apt: pkg={{ item }} state=latest update_cache=yes
+  with_items:
+    - python-pip
+    - wget

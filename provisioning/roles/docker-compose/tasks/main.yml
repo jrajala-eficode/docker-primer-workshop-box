@@ -1,0 +1,2 @@
+- name: Install docker-compose
+  pip: name=docker-compose extra_args='-U'
